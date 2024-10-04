@@ -62,10 +62,10 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 									: "text-zinc-600 hover:text-zinc-900"
 							} `}
 						>
-							<Eye className="w-5 h-5" />{" "}
-							{Intl.NumberFormat("en-US", { notation: "compact" }).format(
+							{/* <Eye className="w-5 h-5" />{" "} */}
+							{/* {Intl.NumberFormat("en-US", { notation: "compact" }).format(
 								views,
-							)}
+							)} */}
 						</span>
 						<Link target="_blank" href="https://t.me/m9m9ra">
 							<Send

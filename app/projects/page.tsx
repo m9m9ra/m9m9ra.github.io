@@ -8,35 +8,31 @@ import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 
-// const redis = Redis.fromEnv();
 const redis = new Redis({
 	url: "https://usable-wren-26207.upstash.io",
 	token: "AWZfAAIjcDE4ZGJlMzliMmEzMzY0ZWI2ODU3MTFlMDczNzdjYmNhOHAxMA",
 });
 
-export const revalidate = 60;
-// export const dynamicParams = true;
-export const dynamic = "force-static";
 
-export default async function ProjectsPage() {
-	const views = (
-		await redis.mget<number[]>(
-			...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-		)
-	).reduce((acc, v, i) => {
-		acc[allProjects[i].slug] = v ?? 0;
-		return acc;
-	}, {} as Record<string, number>);
+export default function ProjectsPage() {
+	// const views = (
+	// 	await redis.mget<number[]>(
+	// 		...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
+	// 	)
+	// ).reduce((acc, v, i) => {
+	// 	acc[allProjects[i].slug] = v ?? 0;
+	// 	return acc;
+	// }, {} as Record<string, number>);
 
 	const featured = allProjects.find((project) => project.slug === "xrunner")!;
-	const sorted = allProjects
-		.filter((p) => p.published)
-		.filter((project) => project.slug !== featured.slug)
-		.sort(
-			(a, b) =>
-				new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-				new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-		);
+	// const sorted = allProjects
+	// 	.filter((p) => p.published)
+	// 	.filter((project) => project.slug !== featured.slug)
+	// 	.sort(
+	// 		(a, b) =>
+	// 			new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
+	// 			new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+	// 	);
 
 	return (
 		<div className="relative pb-16">
@@ -72,7 +68,8 @@ export default async function ProjectsPage() {
 									<span className="flex items-center gap-1 text-xs text-zinc-500">
 										<Eye className="w-4 h-4" />{" "}
 										{Intl.NumberFormat("en-US", { notation: "compact" }).format(
-											views[featured.slug] ?? 0,
+											// views[featured.slug] ?? 0,
+											456
 										)}
 									</span>
 								</div>
