@@ -64,6 +64,7 @@ export default function RootLayout({
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
         <Analytics />
+        <meta name="google-site-verification" content="z4BV_LeD-sc-C4cwvDTeD_ZJG0wIUiIEWwQ7pxryAOY" />
       </head>
       <body
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
