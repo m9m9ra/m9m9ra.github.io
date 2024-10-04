@@ -23,7 +23,7 @@ const socials = [
 		href: "https://github.com/m9m9ra",
 		label: "Github",
 		handle: "m9m9ra",
-	}
+	},
 ];
 
 export default function Example() {
@@ -31,9 +31,12 @@ export default function Example() {
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div style={{
-					paddingBottom: 120
-				}} className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+				<div
+					style={{
+						paddingBottom: 120,
+					}}
+					className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16"
+				>
 					{socials.map((s) => (
 						<Card>
 							<Link
