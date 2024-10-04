@@ -3,7 +3,7 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-  // { name: "Projects", href: "/projects" },
+  { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -38,11 +38,16 @@ export default function Home() {
           I'm building{" "}
           <Link
             target="_blank"
-            href="https://unkey.dev"
+            href="/"
             className="underline duration-500 hover:text-zinc-300"
           >
-            unkey.dev
+            more
           </Link> to solve API authentication and authorization for developers.
+        </h2>
+      </div>
+      <div className="my-16 text-center animate-fade-in">
+        <h2 className="text-sm text-zinc-500 ">
+          Flutter / React-Native 
         </h2>
       </div>
     </div>
