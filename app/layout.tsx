@@ -7,18 +7,18 @@ import { Analytics } from "./components/analytics";
 export const metadata: Metadata = {
   title: {
     default: "M9M9Ra | Development",
-    template: "%s | m9m9ra.com",
+    template: "%s | m9m9ra.github.io",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "M9M9Ra | Development: Flutter & React Native",
   openGraph: {
-    title: "m9m9ra.com",
+    title: "m9m9ra.github.io",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "M9M9Ra | Development: Flutter & React Native",
     // url: "https://chronark.com",
     // siteName: "chronark.com",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://m9m9ra.github.io/og.png",
         width: 1920,
         height: 1080,
       },
