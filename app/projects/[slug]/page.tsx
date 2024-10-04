@@ -26,7 +26,7 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 		}));
 }
 
-export default async function PostPage({ params }: Props) {
+export default function PostPage({ params }: Props) {
 	// const views = (
 	// 	await redis.mget<number[]>(
 	// 		...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
@@ -53,8 +53,8 @@ export default async function PostPage({ params }: Props) {
 		notFound();
 	}
 
-	const views =
-		(await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
+	const views = 465;
+		// (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
 	return (
 		<div className="bg-zinc-50 min-h-screen">
