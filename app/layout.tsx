@@ -65,6 +65,7 @@ export default function RootLayout({
       <head>
         <Analytics />
         <meta name="google-site-verification" content="z4BV_LeD-sc-C4cwvDTeD_ZJG0wIUiIEWwQ7pxryAOY" />
+        <meta name="yandex-verification" content="4213751e39cb041d" />
       </head>
       <body
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined

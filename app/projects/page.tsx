@@ -20,16 +20,12 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "unkey")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+  const featured = allProjects.find((project) => project.slug === "xrunner")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
       (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug &&
-        project.slug !== top3.slug,
+        project.slug !== featured.slug
     )
     .sort(
       (a, b) =>
@@ -64,8 +60,9 @@ export default async function ProjectsPage() {
                         }).format(new Date(featured.date))}
                       </time>
                     ) : (
-                      <span>SOON</span>
+                      <span>Cooming soon...</span>
                     )}
+                    {/* <span>Coming soon...</span> */}
                   </div>
                   <span className="flex items-center gap-1 text-xs text-zinc-500">
                     <Eye className="w-4 h-4" />{" "}
@@ -84,6 +81,8 @@ export default async function ProjectsPage() {
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {featured.description}
                 </p>
+                <br />
+                <br />
                 <div className="absolute bottom-4 md:bottom-8">
                   <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
                     Read more <span aria-hidden="true">&rarr;</span>
@@ -93,17 +92,10 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
 
-          <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project) => (
-              <Card key={project.slug}>
-                <Article project={project} views={views[project.slug] ?? 0} />
-              </Card>
-            ))}
-          </div>
         </div>
         <div className="hidden w-full h-px md:block bg-zinc-800" />
 
-        <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
+        {/* <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 0)
@@ -131,7 +123,7 @@ export default async function ProjectsPage() {
                 </Card>
               ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

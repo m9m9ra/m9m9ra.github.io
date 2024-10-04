@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
+import {Navigation} from "./components/nav";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export default function Home() {
@@ -23,6 +25,7 @@ export default function Home() {
           ))}
         </ul>
       </nav>
+      {/* <Navigation canGoBack/> */}
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
@@ -35,18 +38,9 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          I'm building{" "}
-          <Link
-            target="_blank"
-            href="/"
-            className="underline duration-500 hover:text-zinc-300"
-          >
-            more
-          </Link> to solve API authentication and authorization for developers.
-        </h2>
-      </div>
-      <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">
+          I'm developing mobile applications and MVP
+          <br />
+          <br />
           Flutter / React-Native 
         </h2>
       </div>

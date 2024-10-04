@@ -1,11 +1,11 @@
 import { Redis } from "@upstash/redis";
 import { NextRequest, NextResponse } from "next/server";
 
-const redis = Redis.fromEnv();
-// const redis = new Redis({
-//   url: 'https://usable-wren-26207.upstash.io',
-//   token: 'AWZfAAIjcDE4ZGJlMzliMmEzMzY0ZWI2ODU3MTFlMDczNzdjYmNhOHAxMA',
-// })
+// const redis = Redis.fromEnv();
+const redis = new Redis({
+  url: 'https://usable-wren-26207.upstash.io',
+  token: 'AWZfAAIjcDE4ZGJlMzliMmEzMzY0ZWI2ODU3MTFlMDczNzdjYmNhOHAxMA',
+})
 export const config = {
   runtime: "edge",
 };

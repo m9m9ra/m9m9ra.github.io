@@ -1,6 +1,6 @@
 "use client";
 // @ts-ignore
-import { Github, Mail, Send } from "lucide-react";
+import { Github, Mail, Send, Youtube } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -8,20 +8,14 @@ import { Card } from "../components/card";
 const socials = [
 	{
 		icon: <Send size={20} />,
-		href: "https://t.me/m9m9ra",
-		label: "Telegram",
-		handle: "@m9m9ra",
+		href: "https://t.me/m9m9ra_channel",
+		label: "Telegram channel",
+		handle: "@m9m9ra_channel",
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:vasa4g@gmail.com",
-		label: "Email",
-		handle: "vasa4g@gmail.com",
-	},
-	{
-		icon: <Github size={20} />,
+		icon: <Youtube size={20}/>,
 		href: "https://github.com/m9m9ra",
-		label: "Github",
+		label: "YouTube",
 		handle: "m9m9ra",
 	}
 ];
