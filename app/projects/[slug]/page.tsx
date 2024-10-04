@@ -1,3 +1,4 @@
+`use client`
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
@@ -7,6 +8,8 @@ import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
 
 export const revalidate = 60;
+export const dynamicParams = true;
+export const dynamic = 'force-static'
 
 type Props = {
   params: {

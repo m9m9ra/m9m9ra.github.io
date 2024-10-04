@@ -1,3 +1,4 @@
+`use client`
 import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
@@ -10,6 +11,9 @@ import { Eye } from "lucide-react";
 const redis = Redis.fromEnv();
 
 export const revalidate = 60;
+export const dynamicParams = true;
+export const dynamic = 'force-static'
+
 export default async function ProjectsPage() {
   const views = (
     await redis.mget<number[]>(
