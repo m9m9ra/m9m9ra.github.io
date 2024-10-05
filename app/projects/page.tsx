@@ -86,7 +86,7 @@ export default function ProjectsPage() {
 								<br />
 								<br />
 								<div className="absolute bottom-4 md:bottom-8">
-									<p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+									<p className="text-zinc-200 hover:text-zinc-50 lg:block">
 										Read more <span aria-hidden="true">&rarr;</span>
 									</p>
 								</div>

@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeft, Eye, Github, Send } from "lucide-react";
+import { ChevronLeft, Eye, Github, Send } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -95,7 +95,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 								: "text-zinc-600 hover:text-zinc-900"
 						} `}
 					>
-						<ArrowLeft className="w-6 h-6 " />
+						<ChevronLeft className="w-6 h-6 " />
 					</Link>
 				</div>
 			</div>

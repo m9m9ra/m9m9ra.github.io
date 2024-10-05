@@ -12,12 +12,12 @@ const socials = [
 		label: "Telegram channel",
 		handle: "@m9m9ra_channel",
 	},
-	{
-		icon: <Youtube size={20} />,
-		href: "https://github.com/m9m9ra",
-		label: "YouTube",
-		handle: "m9m9ra",
-	},
+	// {
+	// 	icon: <Youtube size={20} />,
+	// 	href: "https://github.com/m9m9ra",
+	// 	label: "YouTube",
+	// 	handle: "m9m9ra",
+	// },
 ];
 
 export default function Example() {
