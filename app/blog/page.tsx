@@ -4,23 +4,36 @@ import { Github, Mail, Send, Youtube } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
+import { useEffect } from "react";
 
 const socials = [
+	{
+		icon: <Youtube size={20} />,
+		href: "https://www.youtube.com/@Melowecom",
+		label: "YouTube",
+		handle: "Melowe",
+	},
 	{
 		icon: <Send size={20} />,
 		href: "https://t.me/m9m9ra_channel",
 		label: "Telegram channel",
 		handle: "@m9m9ra_channel",
 	},
-	// {
-	// 	icon: <Youtube size={20} />,
-	// 	href: "https://github.com/m9m9ra",
-	// 	label: "YouTube",
-	// 	handle: "m9m9ra",
-	// },
 ];
 
 export default function Example() {
+	useEffect(() => {
+		// @ts-ignore
+		window.yaContextCb.push(() => {
+			// @ts-ignore
+			Ya.Context.AdvManager.render({
+				"blockId": "R-A-12248337-1",
+				"type": "fullscreen",
+				"platform": "touch"
+			})
+		})
+	}, []);
+
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />

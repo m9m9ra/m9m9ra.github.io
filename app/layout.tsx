@@ -3,11 +3,12 @@ import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import { useEffect } from "react";
 
 export const metadata: Metadata = {
 	title: {
 		default: "M9M9Ra | Development",
-		template: "%s | m9m9ra.github.io",
+		template: "%s",
 	},
 	description: "M9M9Ra | Development: Flutter & React Native",
 	openGraph: {
@@ -68,12 +69,13 @@ export default function RootLayout({
 					content="z4BV_LeD-sc-C4cwvDTeD_ZJG0wIUiIEWwQ7pxryAOY"
 				/>
 				<meta name="yandex-verification" content="4213751e39cb041d" />
+				{/* <!-- Yandex.RTB --> */}
+				<script>window.yaContextCb=window.yaContextCb||[]</script>
+				<script src="https://yandex.ru/ads/system/context.js" async></script>
 			</head>
-			<body
-				className={`bg-black ${
+			<body className={`bg-black ${
 					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-				}`}
-			>
+				}`}>
 				{children}
 			</body>
 		</html>

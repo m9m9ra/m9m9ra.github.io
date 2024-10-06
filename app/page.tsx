@@ -1,12 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Particles from "./components/particles";
 import { Navigation } from "./components/nav";
 
 const navigation = [
+	{ name: "Blog", href: "/blog" },
 	{ name: "Projects", href: "/projects" },
 	{ name: "Contact", href: "/contact" },
-	{ name: "Blog", href: "/blog" },
 ];
 
 export default function Home() {
@@ -33,12 +33,22 @@ export default function Home() {
 			/>
 			<h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
 				M9M9Ra
+				{/* <span style={{
+					fontSize: 1,
+					color: '#ffffff00'
+				}}>Development & MVP</span> */}
 			</h1>
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
 				<h2 className="text-sm text-zinc-500 ">
-					I'm developing mobile applications and MVP
+					I'm developing{" "}
+					<Link
+						href="/projects/xrunner"
+						className="underline duration-500 hover:text-zinc-300"
+					>
+						mobile applications
+					</Link> and MVP
 					<br />
 					<br />
 					Flutter / React-Native
