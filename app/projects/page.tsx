@@ -23,7 +23,7 @@ export default function ProjectsPage() {
 	// 	acc[allProjects[i].slug] = v ?? 0;
 	// 	return acc;
 	// }, {} as Record<string, number>);
-	const views: Array<number> = [];
+	const views: number = 72;
 
 	const featured = allProjects.find((project) => project.slug === "xrunner")!;
 	const sorted = allProjects
@@ -121,7 +121,7 @@ export default function ProjectsPage() {
 							.filter((_, i) => i % 3 === 2)
 							.map((project) => (
 								<Card key={project.slug}>
-									<Article project={project} views={views[project.slug] ?? 0} />
+									<Article project={project} views={views ?? 0} />
 								</Card>
 							))}
 					</div>
