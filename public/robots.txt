@@ -6,6 +6,7 @@ Allow: /contacts
 Allow: /blog
 Allow: /projects/xrunner
 Allow: /projects/upilot
+Allow: /projects/yareka
 Disallow: /search
 Disallow: /sdch
 Disallow: /groups

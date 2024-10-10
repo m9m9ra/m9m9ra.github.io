@@ -10,6 +10,12 @@ import { Metadata } from "next";
 // set dynamic metadata
 export function generateMetadata({params}: any): Metadata {
 	console.log(params);
+	if (params.slug == 'xrunner') {
+		return {
+			title: `M9M9Ra | Беготрек`,
+			description: 'M9M9Ra | Development: Flutter & React Native. You have any question ?',
+		  };
+	}
 	return {
 	  title: `M9M9Ra | ${params.slug}`,
 	  description: 'M9M9Ra | Development: Flutter & React Native. You have any question ?',
