@@ -11,16 +11,20 @@ export const metadata: Metadata = {
 		template: "%s",
 	},
 	description: "M9M9Ra | Development: Flutter & React Native",
+	authors: {
+		name: 'M9M9Ra | Development',
+		url: 'https://github.com/m9m9ra'
+	},
 	openGraph: {
-		title: "m9m9ra.github.io",
+		title: "M9M9Ra | Development",
 		description: "M9M9Ra | Development: Flutter & React Native",
-		// url: "https://chronark.com",
-		// siteName: "chronark.com",
+		url: "https://m9m9ra.github.io",
+		siteName: "m9m9ra.github.io",
 		images: [
 			{
 				url: "https://m9m9ra.github.io/og.png",
-				width: 1920,
-				height: 1080,
+				width: 1428, // 1920
+				height: 397, // 1080
 			},
 		],
 		locale: "en-US",
@@ -39,6 +43,8 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		title: "M9M9Ra",
+		creator: '@m9m9ra',
+		site: 'https://m9m9ra.github.io',
 		card: "summary_large_image",
 	},
 	icons: {
