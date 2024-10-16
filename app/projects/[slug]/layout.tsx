@@ -12,8 +12,8 @@ export function generateMetadata({params}: any): Metadata {
 	console.log(params);
 	if (params.slug == 'xrunner') {
 		return {
-			title: `M9M9Ra | Беготрек`,
-			description: 'M9M9Ra | Development: Flutter & React Native. You have any question ?',
+			title: `M9M9Ra | Беготрек: бег, фитнес, ходьба, GPS трекер`,
+			description: 'M9M9Ra | Development: Беготрек — ваше идеальное приложение для бега и активного образа жизни!',
 		  };
 	}
 	return {
