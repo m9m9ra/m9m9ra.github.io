@@ -111,9 +111,10 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 					</div>
 
 					<div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-						{/* {project.rustore ? <a href={`${project.rustore}?rsm=1&mt_link_id=l394r2`} target="_blank">
-							<img src="/rustore_blue.svg" width="188" height="63" alt="Скачайте из RuStore" />
-						</a> : <></>} */}
+						{project.rustore ? <a href={`${project.rustore}?rsm=1&mt_link_id=l394r2`} target="_blank">
+							{/* <img src="/rustore_blue.svg" width="188" height="63" alt="Скачайте из RuStore" /> */}
+							<img src="/rustore_blue.svg" width="248" height="63" alt="Скачайте из RuStore" />
+						</a> : <></>}
 						<div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
 							{links.map((link) => (
 								<Link target="_blank" key={link.label} href={link.href}>
